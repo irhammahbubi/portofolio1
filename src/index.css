@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   PEMBERSIH BUG KOTAK HITAM / OUTLINE PAS DIKLIK
+   ========================================================= */
+
+/* 1. Hilangkan garis kotak focus bawaan browser pada semua tombol & link */
+a:focus, 
+button:focus, 
+header:focus,
+div:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 2. Sembunyikan render kotak fisik dari SVG Filter Gooey */
+header svg,
+.lanyard-wrapper svg {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
